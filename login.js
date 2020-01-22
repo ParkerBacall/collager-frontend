@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () =>{
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(userObject)
+            body: JSON.stringify(userObject),
         })
         .then(response => response.json())
-        .then((token) => {
+        .then(token => {
             localStorage.setItem('token', token.token)
             localStorage.setItem('user', token.user)
         })

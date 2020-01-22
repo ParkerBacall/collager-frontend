@@ -2,11 +2,15 @@ const logout  = document.getElementById('log-out-link')
 const signup  = document.getElementById('sign-up-link')
 const login  = document.getElementById('log-in-link')
 const nameHeader = document.getElementById('username')
+const newCollageButton = document.getElementById('collage-maker')
 
 
 document.addEventListener('DOMContentLoaded', () =>{
     checkToken()
-    showUserInfo()
+    if(localStorage.token){
+        showUserInfo()
+    }
+
 })
 
 function checkToken(){
@@ -14,24 +18,25 @@ function checkToken(){
         logout.style.display = 'block'
         login.style.display = 'none'
         signup.style.display = 'none'
-        logout.addEventListener('click', () => {localStorage.removeItem('token')})
+        logout.addEventListener('click', () => {localStorage.clear()})
     }else{
         logout.style.display = 'none'
         login.style.display = 'block'
         signup.style.display = 'block'
-        nameHeader.textContent = '_'
+        nameHeader.textContent = ' '
+        newCollageButton.textContent = ' '
     }
 }
 
 function showUserInfo(){
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/users',{
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
     })
     .then(response => response.json())
     .then(displayName)
-    }
+}
 
 function displayName(user){
     nameHeader.textContent = `${user.name}'s collages `

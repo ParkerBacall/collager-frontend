@@ -5,24 +5,16 @@ body {
     padding: 0;
     margin: 0;
     font-family: Montserrat, sans-serif;
-    letter-spacing: -1px;
-    
 }
 h2 {
     margin-bottom: 2rem;
 }
 
-body div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
 
 img {
-    width: 35%;
-    margin-left: 33%;
-    margin-right: 33%;
+    width: 15rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 ul {
     padding-left: 0;
@@ -42,12 +34,6 @@ h1 a {
 header, main {
     padding: 2rem 6rem;
 }
-nav > ul {
-    display: flex;
-}
-nav li {
-    margin-left: 2rem;
-}
 
 
 /* Header styles */
@@ -63,46 +49,27 @@ h1 a {
 header, main {
     padding: 0.5rem 4rem;
 }
-nav > ul {
-    display: flex;
-}
-nav li {
-    margin-left: 2rem;
-}
 
 
-/* Page styles */
 
-div > ul {
-    margin-left: 44.4%;
-    margin-bottom: 1rem;
-}
+/* body styles */
 
-div li {
-    font-size: 1.3rem;
-}
 form{
     margin-top: 2rem;
     margin-left: 2rem;
 }
 
-#main-img-div{
-    size: 150px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-#new-link-div{
+#images-list{
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-#sign-up-link{
-    display: block;
-}
-#log-in-link{
-    display: block;
-}
-#log-out-link{
-    display: none;
+.imageLi{
+    padding: 2rem;
 }
 
+#images-list li:hover, #images-list li.active {
+    box-shadow: 1px 0 32px hsl(351, 50%, 80%);
+}
