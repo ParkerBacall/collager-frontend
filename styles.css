@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+
 /* Resets */
 body {
     padding: 0;
@@ -28,26 +31,7 @@ ul {
     list-style: none;
 }
 
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-h1 a {
-    color: inherit;
-    text-decoration: none;
-}
-header, main {
-    padding: 2rem 6rem;
-}
-nav > ul {
-    display: flex;
-}
-nav li {
-    margin-left: 2rem;
-}
-
+ 
 
 /* Header styles */
 header {
@@ -55,9 +39,10 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-h1 a {
+h1 {
     color: inherit;
     text-decoration: none;
+    
 }
 header, main {
     padding: 0.5rem 4rem;
@@ -105,3 +90,14 @@ form{
     display: none;
 }
 
+.deleteBtn{
+    background-color: rgb(214, 107, 74);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    
+}
+
+.deleteBtn:hover{
+    background-color: hsl(17, 78%, 32%);
+}

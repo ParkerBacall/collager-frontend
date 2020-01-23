@@ -8,13 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault()
         const collageFormData = new FormData(collageForm)
         const name = collageFormData.get('name')
-        console.log('images Array send', imagesArray)
         createCollage(name, imagesArray)
     })
 })
 
 function fetchImages(){
-    fetch('http://localhost:3000/images')
+    fetch('http://localhost:3000/images/')
     .then(response => response.json())
     .then(showImages)
 }
@@ -59,7 +58,7 @@ function postCollageImages(image_id, collage_id){
         headers:{
             'Content-Type': 'application/json',
         },
-            body: JSON.stringify({collage_id, image_id}),
+            body: JSON.stringify({collage_id: collage_id, image_id: image_id, size: "0%", position: ""}),
     })
     .then(response => response.json())
     .then(showNewCollage(collage_id))

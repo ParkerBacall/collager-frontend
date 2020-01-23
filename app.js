@@ -45,8 +45,9 @@ function displayName(user){
         console.log(collage)
         const li = document.createElement('li')
         const deleteBtn = document.createElement('button')
-        deleteBtn.innerText = 'R.I.P'
+        deleteBtn.innerText = 'x'
         deleteBtn.addEventListener('click', () =>  deleteCollage(collage.id))
+        deleteBtn.className = 'deleteBtn'
         li.innerHTML = `<a href="showCollage.html?id=${collage.id}"> ${collage.name} </a>`
         collageUl.appendChild(li)
         li.appendChild(deleteBtn)
