@@ -3,6 +3,7 @@ const signup  = document.getElementById('sign-up-link')
 const login  = document.getElementById('log-in-link')
 const nameHeader = document.getElementById('username')
 const newCollageButton = document.getElementById('collage-maker')
+const collageUl = document.getElementById('collage-link-ul')
 
 
 document.addEventListener('DOMContentLoaded', () =>{
@@ -40,4 +41,21 @@ function showUserInfo(){
 
 function displayName(user){
     nameHeader.textContent = `${user.name}'s collages `
+    user.canvas.map(collage => {
+        console.log(collage)
+        const li = document.createElement('li')
+        const deleteBtn = document.createElement('button')
+        deleteBtn.innerText = 'R.I.P'
+        deleteBtn.addEventListener('click', () =>  deleteCollage(collage.id))
+        li.innerHTML = `<a href="showCollage.html?id=${collage.id}"> ${collage.name} </a>`
+        collageUl.appendChild(li)
+        li.appendChild(deleteBtn)
+    })
+}
+
+function deleteCollage(id){
+    event.target.parentNode.remove()
+    fetch(`http://localhost:3000/canvas/${id}`,{
+        method: 'DELETE',
+    })
 }
