@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         showUserInfo()
     }
     makeCollageButton.addEventListener('click', () => {
-        window.location.replace('https://collager.firebaseapp.com/collage-maker.html')
+        window.location.replace('http://localhost:3001/collage-maker.html')
     })
 })
 
@@ -41,7 +41,7 @@ function checkToken(){
 }
 
 function showUserInfo(){
-    fetch('https://collager-backend.herokuapp.com/users',{
+    fetch('http://localhost:3000/users',{
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
@@ -62,6 +62,7 @@ function displayName(user){
         deleteBtn.className = 'deleteBtn'
         collageButton.addEventListener('click', () => {window.location.replace(`showCollage.html?id=${collage.id}`) })
         collageButton.classList = 'btn'
+        collageLi.classList= 'collage-li'
         collageButton.textContent = collage.name
         collageUl.appendChild(collageLi)
         collageLi.append(collageButton, deleteBtn)
@@ -70,7 +71,7 @@ function displayName(user){
 
 function deleteCollage(id){
     event.target.parentNode.remove()
-    fetch(`https://collager-backend.herokuapp.com/canvas/${id}`,{
+    fetch(`http://localhost:3000/canvas/${id}`,{
         method: 'DELETE',
     })
 }

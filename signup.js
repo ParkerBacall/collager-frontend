@@ -1,5 +1,5 @@
 const signUpForm = document.getElementById('signup')
-const signUpURL = 'https://collager-backend.herokuapp.com/users'
+const signUpURL = 'http://localhost:3000/users'
 
 document.addEventListener('DOMContentLoaded', () =>{
     signUpForm.addEventListener('submit', () => signUpFunction(event))
@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', () =>{
             },
             body: JSON.stringify(userObject)
         })
-        window.location.replace('https://collager.firebaseapp.com/index.html/')
+        window.location.replace('http://localhost:3001/')
     }
