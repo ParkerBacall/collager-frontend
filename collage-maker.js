@@ -60,7 +60,7 @@ function postCollageImages(image_id, collage_id){
         headers:{
             'Content-Type': 'application/json',
         },
-            body: JSON.stringify({collage_id: collage_id, image_id: image_id, size: "0%", position: ""}),
+            body: JSON.stringify({collage_id: collage_id, image_id: image_id, size: "0%", position: "", height: ''}),
     })
     .then(response => response.json())
     .then(showNewCollage(collage_id))

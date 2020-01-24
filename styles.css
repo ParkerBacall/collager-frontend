@@ -22,12 +22,6 @@ h2 {
     margin-bottom: 2rem;
 }
 
-body div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
 
 img {
     width: 35%;
@@ -40,7 +34,6 @@ ul {
     padding-inline-start: 0rem;
 }
 
- 
 
 /* Header styles */
 
@@ -74,10 +67,6 @@ h1 {
     
 }
 
-ul{
-    display: flex;
-    float: right;
-}
 
 li{
     margin-right: 3rem;
@@ -135,11 +124,12 @@ form{
     background-color: rgb(58, 108, 173);
 }
 
-#collage-list-div{
+
+
+#collage-link-ul{
     display: flex;
-    margin: 1.5rem;
-    align-items: flex-start;
     justify-content: center;
+    padding: 0.5rem;
 }
 
 #sign-up-link{
@@ -164,4 +154,38 @@ form{
 
 .deleteBtn:hover{
     background-color: hsl(17, 78%, 32%);
+}
+
+
+.btn{
+    left: 15px;
+    width: 90px;
+    height: 35px ;
+    font-size: 1rem;
+    background-color: rgb(128, 173, 231);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.24);
+}
+
+.btn:hover{
+    background-color: rgb(58, 108, 173);
+}
+
+
+#body-div{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background-image: url("images/mess.png");
+}
+
+#bg-img{
+    height: 450px;
+}
+
+#button-ul{
+    float: right;
+    display: flex;
+    justify-content: space-between;
 }

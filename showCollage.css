@@ -23,6 +23,9 @@ header{
     height: 100%;
     background-image: url("images/header.png");
     box-shadow: 0 6px 12px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.24);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #h1-inner-div{
     width: 180px;
@@ -30,4 +33,39 @@ header{
     padding-right: 0.2rem;
     background-color: rgb(128, 173, 231);
     box-shadow: 0 6px 12px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.24);
+}
+
+
+.btn{
+    position: relative;
+    left: 15px;
+    font-size: 1.2rem;
+    background-color: rgb(128, 173, 231);
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    margin: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.24);
+}
+
+.btn:hover{
+    background-color: rgb(58, 108, 173);
+}
+nav{
+    display: flex;
+   margin-right: 1rem;
+    align-items: flex-end;
+}
+
+#collage-div{
+    margin: 4rem;
+}
+
+#collage-inner-div{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+
 }
