@@ -21,12 +21,14 @@ function fetchImages(){
 function showImages(images){
     images.map(image =>{
         const imageLi = document.createElement('li')
+        const img = document.createElement('img')
         imageLi.className = 'imageLi'
-        imageLi.id=image.id
-        imageLi.innerHTML= `<img src=${image.sourceImage}/>`
+        imageLi.id= image.id
+        img.src = image.sourceImage
+        imageLi.appendChild(img)
         imageUl.appendChild(imageLi)
-        imageLi.addEventListener('click', () => {
-            imageLi.classList.toggle('active')
+        img.addEventListener('click', () => {
+            img.classList.toggle('active')
             imagesArray.push(image)
         })
     })

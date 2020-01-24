@@ -1,75 +1,33 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
 /* Resets */
 body {
     padding: 0;
     margin: 0;
-    font-family: Montserrat, sans-serif;
-    letter-spacing: -1px;
+    font-family: 'Ubuntu', sans-serif;
+
     
 }
 h2 {
     margin-bottom: 2rem;
 }
 
-/* body div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-} */
-
-a {
-    padding-left: 4rem;
+header{
+    width: 100%;
+    height: 25%;
 }
 
-ul {
-    padding-left: 0;
-    list-style: none;
+#h1-div{
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/header.png");
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.24);
 }
-
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#h1-inner-div{
+    width: 180px;
+    height: 5%;
+    padding-right: 0.2rem;
+    background-color: rgb(128, 173, 231);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12), 0 6px 12px rgba(0,0,0,0.24);
 }
-
-div{
-    border-top: 50px;
-    margin-left: 250px;
-    margin-right: 300px;
-    margin-bottom: 200px;
-}
-
-header, main {
-    padding: 2rem 6rem;
-}
-nav > ul {
-    display: flex;
-}
-nav li {
-    margin-left: 2rem;
-}
-
-
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header, main {
-    padding: 0.5rem 4rem;
-}
-nav > ul {
-    display: flex;
-}
-nav li {
-    margin-left: 2rem;
-}
-
-
-/* Page styles */
-

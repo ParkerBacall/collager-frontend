@@ -4,6 +4,7 @@ const login  = document.getElementById('log-in-link')
 const nameHeader = document.getElementById('username')
 const newCollageButton = document.getElementById('collage-maker')
 const collageUl = document.getElementById('collage-link-ul')
+const makeCollageButton = document.getElementById('collage-maker')
 
 
 document.addEventListener('DOMContentLoaded', () =>{
@@ -11,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     if(localStorage.token){
         showUserInfo()
     }
-
+    makeCollageButton.addEventListener('click', () => {
+        window.location.replace('http://localhost:3001/collage-maker.html')
+    })
 })
 
 function checkToken(){
@@ -40,12 +43,12 @@ function showUserInfo(){
 }
 
 function displayName(user){
-    nameHeader.textContent = `${user.name}'s collages `
+    nameHeader.textContent = `${user.name}'s Collages `
     user.canvas.map(collage => {
-        console.log(collage)
         const li = document.createElement('li')
         const deleteBtn = document.createElement('button')
         deleteBtn.innerText = 'x'
+        makeCollageButton.style.display = 'inline'
         deleteBtn.addEventListener('click', () =>  deleteCollage(collage.id))
         deleteBtn.className = 'deleteBtn'
         li.innerHTML = `<a href="showCollage.html?id=${collage.id}"> ${collage.name} </a>`
