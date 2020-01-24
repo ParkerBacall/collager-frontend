@@ -14,7 +14,7 @@ let imageHeight = 0
 document.addEventListener('DOMCOntentLoaded', fetchCollage())
 
 function fetchCollage(){
-fetch(`http://localhost:3000/canvas/${query}`)
+fetch(`https://collager-backend.herokuapp.com/canvas/${query}`)
 .then(response => response.json())
 .then(runner)
 }
@@ -129,7 +129,7 @@ function collageImagesSecret(canva_image){
 }
 
 function CreateCollageImage(collage_id, image_id, size, position, imageHeight){
-    fetch(`http://localhost:3000/canva_images/`, {
+    fetch(`https://collager-backend.herokuapp.com/canva_images/`, {
     method: 'POST',
     headers:{
         'Content-Type': 'application/json',

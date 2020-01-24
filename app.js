@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         showUserInfo()
     }
     makeCollageButton.addEventListener('click', () => {
-        window.location.replace('http://localhost:3001/collage-maker.html')
+        window.location.replace('https://collager.firebaseapp.com/collage-maker.html')
     })
 })
 
@@ -41,7 +41,7 @@ function checkToken(){
 }
 
 function showUserInfo(){
-    fetch('http://localhost:3000/users',{
+    fetch('https://collager-backend.herokuapp.com/users',{
         headers: {
             'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
@@ -70,7 +70,7 @@ function displayName(user){
 
 function deleteCollage(id){
     event.target.parentNode.remove()
-    fetch(`http://localhost:3000/canvas/${id}`,{
+    fetch(`https://collager-backend.herokuapp.com/canvas/${id}`,{
         method: 'DELETE',
     })
 }

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function fetchImages(){
-    fetch('http://localhost:3000/images/')
+    fetch('https://collager-backend.herokuapp.com/images/')
     .then(response => response.json())
     .then(showImages)
 }
@@ -35,7 +35,7 @@ function showImages(images){
 }
 
 function createCollage(name, imagesArray){
-    fetch('http://localhost:3000/canvas',{
+    fetch('https://collager-backend.herokuapp.com/canvas',{
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function createCollageImages(imagesArray, collage){
 
 
 function postCollageImages(image_id, collage_id){
-    fetch('http://localhost:3000/canva_images',{
+    fetch('https://collager-backend.herokuapp.com/canva_images',{
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',
