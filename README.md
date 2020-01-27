@@ -2,7 +2,7 @@
 
 ### Run Instructions and Overview:
 
-1. This app is (almost) deployed!
+1. This app is deployed!
     1. In a new chrome window go to [https://collager.firebaseapp.com/](https://collager.firebaseapp.com/).
     1. Sign up from the homepage, and then log in. 
     1. You will see a new collage button hit it and you will be redirected to a new page where you can select images for your     collage.
