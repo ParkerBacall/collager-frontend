@@ -13,7 +13,7 @@
 1. Making your collage.
     1. You will be redirected to the show page for your collage.
     1. Hit generate collage to get a new arrangmeant of your images.
-    1. You can also hi the ?!!!?!! button for a suprize.
+    1. You can also hi the ?!!!?!! button for a suprise.
     1. when you are done hit the back button to go to the homepage.
     
     ![Screen Shot 2020-01-24 at 1 21 47 PM](https://user-images.githubusercontent.com/17993120/73103808-22f7fe00-3eb2-11ea-9d25-787c13cef1c3.png)
