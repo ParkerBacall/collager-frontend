@@ -26,4 +26,4 @@
 
 ![Screen Shot 2020-01-24 at 1 20 55 PM](https://user-images.githubusercontent.com/17993120/73103820-3014ed00-3eb2-11ea-9e48-bdd2156e5ca2.png)
 
-Here is a [video](https://youtu.be/ifvKQvHizIQ) showing off the functionality of the application!
+Here is a [video](https://youtu.be/weT_5jDRkMM) showing off the functionality of the application!
